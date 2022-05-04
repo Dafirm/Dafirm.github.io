@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Drum Machine</title>
+
+    <style type = "text/css">
+    body{
+      background-color:#636261;
+    }
+div.root{
+  width: 1100px;
+  height: 700px;
+  background: linear-gradient(to bottom, gray 0%, #3B3737 50%);
+  position: relative;
+  left: 50%;
+  top: auto;
+  transform: translateX(-50%);
+  margin: 0 auto;
+  border-radius: 10px;
+  border-bottom-style:outset;
+  border-bottom-color: #6D6462;
+  border-top-style: inset;
+  border-top-color:#6D6462;
+  border-width: 15px;
+  border-left-width: 30px;
+  border-left-style: solid;
+  border-left-color:#1F1E1E;
+  border-right-width: 30px;
+  border-right-style: solid;
+  border-right-color:#1F1E1E ;
+  display: inline-block;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: inline-block;
+}
+div.light {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #941D04;
+  background-color: #561103;
+  display:  inline-block;
+  border-radius: 50%;
+  margin-right:42px;
+  position: relative;
+  top: 40px;
+  left: 35px;
+}
+#bar{
+  background-color: #A49E9D;
+  border-radius: 5px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 70px;
+  position: absolute;
+  bottom: 30px;
+  left: 55px;
+  cursor: pointer;
+}
+ div.key {
+  width: 40px;
+  height: 70px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: lightgrey;
+  border: 2px solid grey;
+  margin-right: 3px;
+  cursor: pointer;
+}
+div.red {
+  background-color: tomato;
+  border-color: #D14915;
+}
+div.orange {
+  background-color: orange;
+  border-color: #E6A60C;
+}
+div.yellow {
+  background-color: #fdd238a3;
+  border-color: #DCC80C;
+}
+div.white {
+  background-color: #eeeeee;
+  border-color: lightgrey;
+}
+div.circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid grey;
+  background-color: lightgrey;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.active-circle {
+  border-color: green;
+  background-color: lightgreen;
+}
+.selected {
+  background-color: green;
+  border-color: darkgreen;
+}
+div.dial{
+  width: 30px;
+  height: 30px;
+  border: 5px solid #191717;
+  background-color: #272424;
+  border-radius: 50%;
+  margin-right:12px;
+  display: inline-block;
+  position: relative;
+  left:10px;
+  transform: translate(-50%);
+}
+div.line{
+  width:4px;
+  height: 12px;
+  background-color: tomato;
+  border-radius:3px;
+  position:relative;
+  left:50%;
+  transform: translate(-50%);
+}
+div.dial2{
+  width: 30px;
+  height: 30px;
+  border: 5px solid #191717;
+  background-color: #272424;
+  border-radius: 50%;
+  margin-right:12px;
+  display: inline-block;
+  position: relative;
+  top: 40px;
+  left:10px;
+  transform: translate(-50%);
+}
+#masterVolume{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid #191717;
+  background-color: #272424;
+  position: absolute;
+  top: 375px;
+  left:70px;
+}
+#tempo{
+  width: 80px;
+  height: 60px;
+  background-color: black;
+  border-color: #080808;
+  border-radius: 5px;
+  position: absolute;
+  top: 385px;
+  left:180px;
+}
+#pattern{
+  width: 80px;
+  height: 60px;
+  background-color:#EFD91A ;
+  border-color: #BCAA0A;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  top: 130px;
+  left:270px;
+}
+#export{
+  width: 140px;
+  height: 30px;
+  background-color: red;
+  border-radius: 5px;
+  border-color: solid red;
+  display: inline-block;
+  position: relative;
+  left: 305px;
+  top: 220px;
+}
+#dropDown{
+  width: 140px;
+  height: 20px;
+  background-color: black;
+  border-radius: 5px;
+  border-color: solid red;
+  display: inline-block;
+  position: relative;
+  bottom: 90px;
+  left: 0px;
+}
+#play{
+  width: 80px;
+  height: 60px;
+  background-color:#EFD91A ;
+  border-color: #BCAA0A;
+  border-radius: 5px;
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  top: 130px;
+  left:320px;
+}
+
+div.light2 {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #941D04;
+  background-color: #561103;
+  display:  inline-block;
+  border-radius: 50%;
+  margin-right:40px;
+  position: relative;
+  top: -30px;
+  left: 30px;
+}
+.button {
+  background: blue;
+  color: white;
+  text-align: center;
+  width: 50px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 5px;
+  position: relative;
+  top: 300px;
+  left:-170px;
+  cursor: pointer;
+}
+
+    h1{
+      font-size: 400%;
+      font-style: normal;
+      color: #AB2B0F;
+      background-color: #f0f0f0;
+      text-align: center;
+      border-bottom: 6px solid #AB2B0F;
+      position: relative;
+      margin: 0 auto;
+    }
+    h4{
+      font-weight: normal;
+      font-style: normal;
+      font-family: fantasy;
+      color: #F2EEC3;
+      position: relative;
+      top: 10px;
+      left: -10px;
+      margin-right: 14px;
+      text-align: center;
+      transform: translate(-100%);
+    }
+    h3{
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-family: fantasy;
+      color: #F2EEC3;
+      position: relative;
+      top: 20px;
+      left: 25px;
+      text-align: center;
+      transform: translate(-100%);
+    }
+    h5{
+      background: #EDDA30;
+      width: 50px;
+      padding:3px;
+      border-radius: 5px;
+      border-width: medium;
+      border-color: #C9B609;
+      font-size: 12px;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: ellipsis;
+      font-weight: normal;
+      font-style: normal;
+      margin-left:12px;
+      font-style: normal;
+      color: #625904;
+      position: relative;
+      top: 25px;
+      left: 30px;
+      text-align: center;
+      transform: translate(-100%);
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Drum Machine</h1>
+    <div class="root">
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>KICK</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>CLOSED</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>OPEN</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>SNARE</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>PERC1</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>PERC2</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>HIGH</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>MID</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>LOW</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>SHAKE</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>RIM</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>CLAP</h5></div></div>
+      <div class="light"><h4>TUNE</h4><div class="dial"><div class="line"></div><h3>VOL</h3></div><div class="dial2"><div class="line"></div><h5>CRASH</h5></div></div>
+
+     <div id="masterVolume"><div class="line"></div></div>
+     <div id= "tempo"><h3 style="top:-50px;left:80px;">TEMPO</h3></div>
+     <div id= "pattern"><h3 style="position: absolute; top:-10px;left: 65px;color: #625904;font-style: normal;font-weight:bold;">Pattern A</h3><div class="light2"></div></div>
+     <div id= "pattern"><h3 style="position: absolute; top:-10px;left: 65px;color: #625904;font-style: normal;font-weight:bold;">Pattern B</h3><div class="light2"></div></div>
+     <div id= "pattern"><h3 style="position: absolute; top:-10px;left: 65px;color: #625904;font-style: normal;font-weight:bold;">Pattern C</h3><div class="light2"></div></div>
+     <div id= "export"><h3 style="position: relative; top:-70px;left:135px;">Drum Kit Select</h3><h4 style="font-size: 12px;position: absolute; top:-17px;left: 110px;color: #ffff;font-style: normal;font-weight:bold;">Export_Pattern as WAV</h4>
+       <div id="dropDown"><h2 style="position: absolute;right:0px;top: -20px;text-align:0 auto;color:red;cursor: pointer;">^</h2></div></div>
+     <div id= "play"><h3 style="position: absolute; top:0px;left: 60px;color: #625904;font-style: normal;font-weight:bold;">PLAY</h3><div class="light2"></div></div>
+
+        <div id="bar">
+          <div id="k1" class="key red"><div class="circle"></div></div>
+          <div id="k2" class="key red"><div class="circle"></div></div>
+          <div id="k3" class="key red"><div class="circle"></div></div>
+          <div id="k4" class="key red"><div class="circle"></div></div>
+
+          <div id="k5" class="key orange"><div class="circle"></div></div>
+          <div id="k6" class="key orange"><div class="circle"></div></div>
+          <div id="k7" class="key orange"><div class="circle"></div></div>
+          <div id="k8" class="key orange"><div class="circle"></div></div>
+
+          <div id="k9" class="key yellow"><div class="circle"></div></div>
+          <div id="k10" class="key yellow"><div class="circle"></div></div>
+          <div id="k11" class="key yellow"><div class="circle"></div></div>
+          <div id="k12" class="key yellow"><div class="circle"></div></div>
+
+          <div id="k13" class="key white"><div class="circle"></div></div>
+          <div id="k14" class="key white"><div class="circle"></div></div>
+          <div id="k15" class="key white"><div class="circle"></div></div>
+          <div id="k16" class="key white"><div class="circle"></div></div>
+        </div>
+        <div id="reset" class="button">Reset</div>
+
+        <div id="select" class="button">Select all</div>
+
+        <div id="restore" class="button">Restore</div>
+
+    </div>
+
+    <script>
+
+    </script>
+  </body>
+
+</html>
