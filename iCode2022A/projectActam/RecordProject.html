@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Web dictaphone</title>
+    <link href="
+    RecordProject.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <header>
+        <h1>Web dictaphone</h1>
+      </header>
+
+      <section class="main-controls">
+        <canvas id="oscilloscope" class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record">Record</button>
+          <button class="stop">Stop</button>
+        </div>
+      </section>
+
+      <section class="main-controls">
+        <canvas id="spectrum" class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="play">Play</button>
+        </div>
+      </section>
+
+      <section class="sound-clips">
+
+
+      </section>
+
+    </div>
+
+    <label for="toggle"></label>
+    <input type="checkbox" id="toggle">
+    <script src="RecordProject.js"></script>
+
+  </body>
+</html>
