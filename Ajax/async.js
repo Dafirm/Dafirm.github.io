@@ -55,20 +55,20 @@ $.ajax({
   error: HandleError
   });
 
-  function cdTweets(data){
+  function cbTweets(data){
     console.log(data);
 
 
     $.ajax({
       type : "GET",
-      url: "data/friendss.json",
+      url: "data/friends.json",
       success : cbFriends,
       error: HandleError
-    )};
+    });
 
     }
 
-  function cdFriends(data){
+  function cbFriends(data){
     console.log(data)
 
         $.ajax({
