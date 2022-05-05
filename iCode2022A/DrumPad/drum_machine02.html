@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Drum Machine</title>
+
+    <style type = "text/css">
+    body{
+      background-color: #D0BEBA;
+    }
+
+
+  }
+
+    div.buttoncontainer{
+      background-color: lightgray;
+      border-color: 10px black;
+      display: inline-block;
+      padding-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+      top:100px;
+      left: 10px;
+
+    }
+    div.key {
+      width: 50px;
+      height: 80px;
+      border-radius: 5px;
+      display: inline-block;
+      background-color:lightgray;
+      border: 2px solidgray;
+      margin-right: 5px;
+    }
+    div.tomato {
+      background-color: tomato;
+      border-color: 2px solid tomato;
+    }
+    div.orange {
+      background-color: orange;
+      border-color: 2px solid orange;
+    }
+    div.white {
+      background-color: #eeeeee;
+      border-color: 2px lightgray;
+    }
+    div.yellow {
+      background-color: #f2dd5a;
+      border-color: 2px #ad8c19a3;
+    }
+    div.gold {
+      background-color: gold;
+      border-color: 2px solid gold;
+    }
+    div.magenta{
+      background-color: magenta;
+      border-color: 2px solid magenta;
+    }
+    div.cyan {
+      background-color: cyan;
+      border-color: 2px solid cyan;
+    }
+    div.button:active{
+        background-color: green;
+    }
+    div.circle:active{
+      background-color: red;
+      border-color: white;
+    }
+    h1{
+      font-size: 400%;
+      font-style: italic;
+      color: #AB2B0F;
+      background-color: white;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    div.button{
+      text-align: center;
+      margin-bottom:20px;
+      font-style: italic;
+      font-size: 10px;
+      font-family: sans-serif;
+
+    }
+
+    div.circle{
+      width: 10px;
+      height: 10px;
+      border: 1px solid gray;
+      border-radius: 50%;
+      background-color: silver;
+      position:relative;
+      top: 5px;
+      left: 50%;
+      transform: translate(-50%);
+      cursor: pointer;
+
+    }
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <audio src="sounds/808_kick.wav" autostart ="false" id = "808_kick"></audio>
+    <audio src="sounds/909_kick.wav" autostart ="false" id = "909_kick"></audio>
+    <audio src="sounds/808_snare.wav" autostart ="false" id = "808_snare"></audio>
+    <audio src="sounds/909_snare.wav" autostart ="false" id = "909_snare"></audio>
+    <audio src="sounds/808_hihatclosed.wav" autostart ="false" id = "808_hihatclosed"></audio>
+    <audio src="sounds/808_hihatopen.wav" autostart ="false" id = "808_hihatopen"></audio>
+    <audio src="sounds/808_cymbal.wav" autostart ="false" id = "808_cymbal"></audio>
+    <audio src="sounds/909_cymbal.wav" autostart ="false" id = "909_cymbal"></audio>
+    <audio src="sounds/808_tom.wav" autostart ="false" id = "808_tom"></audio>
+    <audio src="sounds/909_tom.wav" autostart ="false" id = "909_tom"></audio>
+    <audio src="sounds/808_clap.wav" autostart ="false" id = "808_clap"></audio>
+    <audio src="sounds/909_clap.wav" autostart ="false" id = "909_clap"></audio>
+    <audio src="sounds/808_cowbell.wav" autostart ="false" id = "808_cowbell"></audio>
+    <audio src="sounds/909_cowbell.wav" autostart ="false" id = "909_cowbell"></audio>
+
+    <h1>Dafirm Drum Machine</h1>
+
+
+<div class = "buttoncontainer">
+       <div class = "key tomato button" onclick = "playSample('808_kick')">
+         kick1<div class= "circle text"></div></div>
+       <div class = "key tomato button" onclick = "playSample('909_kick')">
+         kick2<div class= "circle"></div></div>
+       <div class = "key white button" onclick = "playSample('808_snare')">
+         snare1<div class= "circle"></div></div>
+       <div class = "key white button" onclick = "playSample('909_snare')">
+         snare2<div class= "circle"></div></div>
+       <div class = "key yellow button" onclick = "playSample('808_hihatclosed')">
+         HiHat 2<div class= "circle"></div></div>
+       <div class = "key yellow button" onclick = "playSample('808_hihatopen')">
+         HiHat 2<div class= "circle"></div></div>
+       <div class = "key gold button" onclick = "playSample('808_cymbal')">
+         cymbal 1<div class= "circle"></div></div>
+       <div class = "key gold button" onclick = "playSample('909_cymbal')">
+         cymbal 2<div class= "circle"></div></div>
+       <div class = "key orange button" onclick = "playSample('808_tom')">
+         Tom1<div class= "circle"></div></div>
+       <div class = "key orange button" onclick = "playSample('909_tom')">
+         Tom2<div class= "circle"></div></div>
+       <div class = "key magenta button" onclick = "playSample('808_clap')">
+         clap1<div class= "circle"></div></div>
+       <div class = "key magenta button" onclick = "playSample('909_clap')">
+         clap2<div class= "circle"> </div></div>
+       <div class = "key cyan button" onclick = "playSample('808_cowbell')">
+         cowbell 1<div class= "circle"> </div></div>
+       <div class = "key cyan button" onclick = "playSample('909_cowbell')">
+         cowbell 2<div class= "circle"> </div></div>
+  </div>
+
+
+
+    <script>
+
+    function playSample(sampleName){
+      var sample = document.getElementById(sampleName);
+      sample.play();
+    }
+    </script>
+  </body>
+
+</html>
