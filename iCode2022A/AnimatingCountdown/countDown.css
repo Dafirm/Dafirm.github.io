@@ -8,6 +8,19 @@ h1{
   font-size: 74px;
   letter-spacing: 10px;
 }
+h2{
+  color: #ffff;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 20px;
+  font-family: fantasy;
+  background: #E6A013;
+  width: 450px;
+  margin: 5% auto;
+  box-sizing: border-box;
+  border-radius: 20px
+
+}
 #del-countdown{
   width: 850px;
   margin: 15% auto;
