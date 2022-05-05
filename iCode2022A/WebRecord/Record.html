@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Web Audio Record</title>
+    <link href="
+    Record.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    div#mp3_player{ width:500px; height:100px; background:#000; padding:5px; margin:50px auto;}
+    div#mp3_player > div > audio{ width: 500px; height:30px;background: #000; float:left;}
+    div#mp3_player canvas{width:500px; height: 60px; margin-top: 10px; background:#002D3C; float:left;}
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Web Audio Record</h1>
+      </header>
+      <section class="main-controls">
+        <canvas class="visualizer" height="60px"></canvas>
+        <div id="buttons">
+          <button class="record">Record</button>
+          <button class="stop">Stop</button>
+        </div>
+      </section>
+      <section class="sound-clips">
+      </section>
+    </div>
+    <label for="toggle"></label>
+    <input type="checkbox" id="toggle">
+
+    <script src="Record.js"></script>
+
+  </body>
+</html>
