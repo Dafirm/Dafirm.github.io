@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Virtual Keyboard </title>
+   <style media="screen">
+     body{
+       background-color: black
+     }
+
+     .C_Note{
+       color: black;
+       position: absolute;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       z-index: 50;
+       background-color: white;
+       cursor: pointer;
+       left: 366px;
+       top: 142px;
+       }
+     .D_Note{
+       position: absolute;
+       z-index: 51;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 56px;
+       background-color: white;
+       cursor: pointer;
+       left: 369px;
+       top: 143px;
+       }
+     .E_Note{
+       position: absolute;
+       z-index: 53;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 111px;
+       background-color: white;
+       cursor: pointer;
+       left: 373px;
+       top: 143px;
+       }
+
+     .F_Note{
+       position: absolute;
+       z-index: 55;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 167px;
+       background-color: white;
+       cursor: pointer;
+       left: 374px;
+       top: 144px;
+       }
+
+     .G_Note{
+       position: absolute;
+       z-index: 56;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 223px;
+       background-color: white;
+       cursor: pointer;
+       left: 376px;
+       top: 144px;
+       }
+
+     .A_Note{
+       position: absolute;
+       z-index: 58;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 279px;
+       background-color: white;
+       cursor: pointer;
+       left: 378px;
+       top: 144px;
+       }
+
+     .B_Note{
+       position: absolute;
+       z-index: 60;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 335px;
+       background-color: white;
+       cursor: pointer;
+       left: 382px;
+       top: 143px;
+       }
+
+     .C1_Note{
+       position: absolute;
+       z-index: 62;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 391px;
+       background-color: white;
+       cursor: pointer;
+       left: 383px;
+       top: 142px;
+       }
+
+     .D1_Note{
+        position: absolute;
+        z-index: 63;
+        color:black;
+        padding-top: 258px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-left: 451px;
+        background-color: white;
+        cursor: pointer;
+        left: 389px;
+        top: 142px;
+        }
+
+     .E1_Note{
+       position: absolute;
+       z-index: 65;
+       color:black;
+       padding-top: 258px;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 20px;
+       margin-left: 511px;
+       background-color: white;
+       cursor: pointer;
+       left: 395px;
+       top: 142px;
+       }
+
+     .F1_Note{
+         position: absolute;
+         z-index: 67;
+         color:black;
+         padding-top: 258px;
+         padding-bottom: 20px;
+         padding-right: 20px;
+         padding-left: 20px;
+         margin-left: 575px;
+         background-color: white;
+         cursor: pointer;
+         left: 395px;
+         top: 142px;
+         }
+
+    .Cs_Note{
+       position: absolute;
+       z-index: 52;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 18px;
+       margin-left: 26px;
+       padding-top: 180px;
+       background-color: black;
+       color:white;
+       border-color: black;
+       border-color: red;
+       cursor: pointer;
+       left: 364px;
+       top: 142px;
+       }
+
+    .Ds_Note{
+       position: absolute;
+       z-index: 54;
+       padding-bottom: 20px;
+       padding-right: 20px;
+       padding-left: 18px;
+       margin-left: 90px;
+       padding-top: 180px;
+       background-color: black;
+       color:white;
+       border-color: black;
+       border-color: red;
+       cursor: pointer;
+       left: 363px;
+       top: 143px;
+       }
+
+     .Fs_Note{
+        position: absolute;
+        z-index: 57;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 18px;
+        margin-left: 190px;
+        padding-top: 180px;
+        background-color: black;
+        color:white;
+        border-color: black;
+        border-color: red;
+        cursor: pointer;
+        left: 375px;
+        top: 144px;
+        }
+
+     .Gs_Note{
+        position: absolute;
+        z-index: 59;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 18px;
+        margin-left: 254px;
+        padding-top: 180px;
+        background-color: black;
+        color:white;
+        border-color: black;
+        border-color: red;
+        cursor: pointer;
+        left: 373px;
+        top: 144px;
+        }
+
+     .Bb_Note{
+        position: absolute;
+        z-index: 61;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 18px;
+        margin-left: 320px;
+        padding-top: 180px;
+        background-color: black;
+        color:white;
+        border-color: black;
+        border-color: red;
+        cursor: pointer;
+        left: 369px;
+        top: 143px;
+        }
+
+     .Gs_Note{
+        position: absolute;
+        z-index: 59;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 18px;
+        margin-left: 254px;
+        padding-top: 180px;
+        background-color: black;
+        color:white;
+        border-color: black;
+        border-color: red;
+        cursor: pointer;
+        left: 373px;
+        top: 144px;
+        }
+
+     .Cs1_Note{
+         position: absolute;
+         z-index: 64;
+         padding-bottom: 20px;
+         padding-right: 20px;
+         padding-left: 18px;
+         margin-left: 416px;
+         padding-top: 180px;
+         background-color: black;
+         color:white;
+         border-color: black;
+         border-color: red;
+         cursor: pointer;
+         left: 386px;
+         top: 142px;
+         }
+
+     .Ds1_Note{
+        position: absolute;
+        z-index: 66;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 18px;
+        margin-left: 482px;
+        padding-top: 180px;
+        background-color: black;
+        color:white;
+        border-color: black;
+        border-color: red;
+        cursor: pointer;
+        left: 389px;
+        top: 142px;
+        }
+   </style>
+</head>
+<SCRIPT>
+  var Cbleep = new Audio()
+  Cbleep.src = "C.wav";
+
+  var Dbleep = new Audio()
+  Dbleep.src = "D.wav";
+
+  var Ebleep = new Audio()
+  Ebleep.src = "E.wav";
+
+  var Fbleep = new Audio()
+  Fbleep.src = "F.wav";
+
+  var Gbleep = new Audio()
+  Gbleep.src = "G.wav";
+
+  var Ableep = new Audio()
+  Ableep.src = "A.wav";
+
+  var Bbleep = new Audio()
+  Bbleep.src = "B.wav";
+
+  var C1bleep = new Audio()
+  C1bleep.src = "C1.wav";
+
+  var D1bleep = new Audio()
+  D1bleep.src = "D1.wav";
+
+  var E1bleep = new Audio()
+  E1bleep.src = "E1.wav";
+
+  var F1bleep = new Audio()
+  F1bleep.src = "F1.wav";
+
+  var Csbleep = new Audio()
+  Csbleep.src = "C_s.wav";
+
+  var Dsleep = new Audio()
+  Dsbleep.src = "D_s.wav";
+
+  var Fsbleep = new Audio()
+  Fsbleep.src = "F_s.wav";
+
+  var Gsbleep = new Audio()
+  Gsbleep.src = "G_s.wav";
+
+  var Bbbleep = new Audio()
+  Bbbleep.src = "Bb.wav";
+
+  var Cs1bleep = new Audio()
+  Cs1bleep.src = "C_s1.wav";
+
+  var Ds1bleep = new Audio()
+  Ds1bleep.src = "D_s1.wav";
+
+</SCRIPT>
+
+<body><center>
+<button class ="Cs_Note" OnClick ="Csbleep.play()">C#</button>
+<button class ="Ds_Note" OnClick ="Dsbleep.play()">D#</button>
+<button class ="Fs_Note" OnClick ="Fsbleep.play()">F#</button>
+<button class ="Gs_Note" OnClick ="Gsbleep.play()">G#</button>
+<button class ="Bb_Note" OnClick ="Bbbleep.play()">Bb</button>
+<button class ="Cs1_Note" OnClick ="Cs1bleep.play()">C#1</button>
+<button class ="Ds1_Note" OnClick ="Ds1bleep.play()">D#1</button>
+
+
+<button class ="C_Note" OnClick="Cbleep.play()">C</button>
+<button class ="D_Note" OnClick ="Dbleep.play()">D</button>
+<button class ="E_Note" OnClick ="Ebleep.play()">E</button>
+<button class ="F_Note" OnClick ="Fbleep.play()">F</button>
+<button class ="G_Note" OnClick ="Gbleep.play()">G</button>
+<button class ="A_Note" OnClick ="Ableep.play()">A</button>
+<button class ="B_Note" OnClick ="Bbleep.play()">B</button>
+<button class ="C1_Note" OnClick ="C1bleep.play()">C1</button>
+<button class ="D1_Note" OnClick ="D1bleep.play()">D1</button>
+<button class ="E1_Note" OnClick ="E1bleep.play()">E1</button>
+<button class ="F1_Note" OnClick ="F1bleep.play()">F1</button>
+
+<div id= "div1"><h1><u><b><font color = white>Piano</font></div>
+</center>
+</body>
+</html>
