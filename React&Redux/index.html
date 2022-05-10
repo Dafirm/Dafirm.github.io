@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width, imitial-scale = 1.0">
+    <meta http-equiv = "X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      class App extends React.Component{
+        state = {
+          name: 'Femi',
+          age:32
+        }
+        /*handleClick = (e) =>{   //we use arrow function to use 'this' to acess the state
+          //console.log(e.target);
+          this.setState({  //changing state
+            name: 'Bimpe',
+            age: 25
+          });
+          console.log(this.state);
+        }
+        handleMouseOver(e){
+          console.log(e)
+        }
+        handleCopy(e){
+          document.write("Don't steal my work!" )
+        }*/
+        handleChange = (e) => {
+          this.setState({
+            name: e.target.value
+          });
+        }
+        render(){
+          return(
+          <div className = "app-content">
+            //<h1>Hey, Dafirm</h1>
+            //<p>My name is: {this.state.name} and I am {this.state.age} years</p>
+            //<button onClick = {this.handleClick}>Click Me </button>
+            //<button onMouseOver ={this.handleMouseOver}>Hover Me </button>
+            //<p onCopy = {this.handleCopy}>What we think, we become</p>*/
+            <h1>My name is { this.state.name } </h1>
+            <form>
+              <input type = "text" onChange = {this.handleChange}/>
+              <button>Submit</button>
+            </form>
+          </div>
+          )
+        }
+      }
+      ReactDOM.render(<App/>, document.getElementById('app'));
+    </script>
+  </body>
+</html>
