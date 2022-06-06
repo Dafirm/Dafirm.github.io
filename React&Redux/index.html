@@ -18,7 +18,7 @@
           name: 'Femi',
           age:32
         }
-        /*handleClick = (e) =>{   //we use arrow function to use 'this' to acess the state
+        handleClick = (e) =>{   //we use arrow function to use 'this' to acess the state
           //console.log(e.target);
           this.setState({  //changing state
             name: 'Bimpe',
@@ -31,7 +31,7 @@
         }
         handleCopy(e){
           document.write("Don't steal my work!" )
-        }*/
+        }
         handleChange = (e) => {
           this.setState({
             name: e.target.value
@@ -40,16 +40,12 @@
         render(){
           return(
           <div className = "app-content">
-            //<h1>Hey, Dafirm</h1>
-            //<p>My name is: {this.state.name} and I am {this.state.age} years</p>
-            //<button onClick = {this.handleClick}>Click Me </button>
-            //<button onMouseOver ={this.handleMouseOver}>Hover Me </button>
-            //<p onCopy = {this.handleCopy}>What we think, we become</p>*/
-            <h1>My name is { this.state.name } </h1>
-            <form>
-              <input type = "text" onChange = {this.handleChange}/>
-              <button>Submit</button>
-            </form>
+            <h1>Hey, Dafirm</h1>
+            <p>My name is: {this.state.name} and I am {this.state.age} years</p>
+            <button onClick = {this.handleClick}>Click Me </button>
+            <button onMouseOver ={this.handleMouseOver}>Hover Me </button>
+            <p onCopy = {this.handleCopy}>What we think, we become</p>
+
           </div>
           )
         }
